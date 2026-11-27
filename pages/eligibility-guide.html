@@ -3,246 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Check Charitree aid eligibility across Medical, Education, Food Aid, Housing, and Clean Water programs and prepare required verification documents.">
-  <title>Eligibility Guide | Charitree - Growing Hope Together</title>
+  <meta name="description" content="Check eligibility for Charitree support programs.">
+  <title>Eligibility Guide | Charitree</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
-    <div class="container nav-container">
+    <div class="nav-container">
       <a class="brand" href="../index.html" aria-label="Charitree Home">
-        <img
-          class="brand__logo"
-          src="../images/charitree-logo.jpg"
-          alt="Charitree Growing Hope Together logo"
-        >
-        <span class="brand__text">
-          <span class="brand__name">Charitree</span>
-          <span class="brand__tagline">Growing Hope Together</span>
-        </span>
+        <img class="brand__logo" src="../images/charitree-logo.png" alt="Charitree logo" />
+        <span>Charitree</span>
       </a>
-
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="primary-nav"
-        aria-label="Toggle navigation menu"
-      >
-        <span class="nav-toggle__bars" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
-
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
       <nav id="primary-nav" class="site-nav" aria-label="Primary Navigation">
         <ul class="nav-list">
           <li><a class="nav-link" href="../index.html">Home</a></li>
-          <li><a class="nav-link" href="../index.html#campaigns">Campaign</a></li>
+          <li><a class="nav-link" href="../index.html#campaigns">Campaigns</a></li>
           <li><a class="nav-link" href="request-help.html">Request Help</a></li>
-          <li><a class="nav-link is-active" href="eligibility-guide.html" aria-current="page">Eligibility</a></li>
+          <li><a class="nav-link is-current" href="eligibility-guide.html" aria-current="page">Eligibility</a></li>
           <li><a class="nav-link" href="track-request.html">Track</a></li>
-          <li><a class="btn btn-cta nav-cta" href="../index.html#donate">Donate Now</a></li>
+          <li><a class="nav-link nav-donate" href="../index.html#donate">Donate Now</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main-content">
-    <section class="page-hero">
-      <div class="container">
-        <span class="badge badge-sage">Beneficiary Guidance</span>
-        <h1>Eligibility Guide</h1>
-        <p class="page-hero__lead">
-          Explore support criteria across Charitree's verified aid programs, calculate your estimated tier, and complete your document readiness checklist before applying.
-        </p>
-      </div>
-    </section>
+  <main id="main-content" class="container">
 
-    <!-- Category Tabs + JS-Rendered Program Criteria -->
-    <section class="section" aria-labelledby="programs-heading">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-header__eyebrow">Aid Categories</span>
-          <h2 id="programs-heading">Browse Criteria by Support Category</h2>
-          <p>Select a category tab or search keywords to review aid caps, income guidelines, and required documents.</p>
-        </div>
+    <div id="eligibility-tabs" class="tabs" role="tablist" aria-label="Categories">
+      <button class="tab-btn is-active" role="tab" aria-selected="true" data-category="Medical">Medical</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-category="Education">Education</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-category="Food Aid">Food Aid</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-category="Housing">Housing</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-category="Clean Water">Clean Water</button>
+    </div>
 
-        <div class="toolbar">
-          <div id="eligibility-tabs" class="category-tabs" role="tablist" aria-label="Support program categories">
-            <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-category="all">All</button>
-            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="Medical">Medical</button>
-            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="Education">Education</button>
-            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="Food Aid">Food Aid</button>
-            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="Housing">Housing</button>
-            <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="Clean Water">Clean Water</button>
-          </div>
-
-          <div class="search-box">
-            <label class="sr-only" for="program-search">Search eligibility programs</label>
-            <input
-              id="program-search"
-              class="form-control"
-              type="search"
-              placeholder="Search criteria or document..."
-              autocomplete="off"
-            >
-          </div>
-        </div>
-
-        <p id="programs-status" class="field-hint" role="status" aria-live="polite"></p>
-        <div id="programs-grid" class="grid grid-2"></div>
-        <div id="programs-empty" class="status-banner is-warning" hidden>
-          <strong>No matching programs found.</strong> Try switching back to <em>All</em> or clearing your search text.
-        </div>
-      </div>
-    </section>
-
-    <!-- Check My Eligibility Calculator + Checklist Activity (Matches Prototype) -->
-    <section class="section section--alt" aria-labelledby="calculator-heading">
-      <div class="container grid grid-2">
-        <article class="eligibility-box">
-          <span class="badge badge-coral">Interactive Screener</span>
-          <h2 id="calculator-heading" style="margin-top: 0.6rem;">Check My Eligibility</h2>
-          <p>Enter your household details to calculate your support tier and recommended aid limit.</p>
-
-          <form id="eligibility-form" class="form-grid" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="calc-income">Monthly Income (Rs.) *</label>
-                <input
-                  id="calc-income"
-                  class="form-control"
-                  type="number"
-                  min="0"
-                  step="500"
-                  placeholder="e.g. 42000"
-                  required
-                >
-                <span id="calc-income-error" class="field-error" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="calc-members">Household Members *</label>
-                <input
-                  id="calc-members"
-                  class="form-control"
-                  type="number"
-                  min="1"
-                  max="25"
-                  placeholder="e.g. 5"
-                  required
-                >
-                <span id="calc-members-error" class="field-error" aria-live="polite"></span>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="calc-category">Support Category *</label>
-              <select id="calc-category" class="form-control" required>
-                <option value="">-- Select category --</option>
-                <option value="Medical">Medical Aid</option>
-                <option value="Education">Education Stipend &amp; Fees</option>
-                <option value="Food Aid">Emergency Food Ration</option>
-                <option value="Housing">Emergency Shelter &amp; Housing</option>
-                <option value="Clean Water">Clean Water &amp; Sanitation</option>
-              </select>
-              <span id="calc-category-error" class="field-error" aria-live="polite"></span>
-            </div>
-
-            <label class="checkbox-row">
-              <input id="calc-docs-ready" type="checkbox">
-              <span>I have a valid CNIC and supporting verification documents ready.</span>
-            </label>
-
-            <div>
-              <button class="btn btn-cta" type="submit">Calculate Eligibility</button>
-            </div>
-          </form>
-
-          <div id="eligibility-result" class="status-banner" role="status" aria-live="polite" hidden></div>
-        </article>
-
-        <aside class="checklist-panel" aria-labelledby="checklist-heading">
-          <span class="badge badge-sage">Readiness Check</span>
-          <h2 id="checklist-heading" style="margin-top: 0.6rem;">Checklist Activity</h2>
-          <p>Confirm the criteria you meet. Your progress is saved automatically in this browser.</p>
-
+    <section class="box" aria-labelledby="calc-title">
+      <h2 id="calc-title" class="box__title">Check My Eligibility</h2>
+      <form id="eligibility-form" class="box__body" novalidate>
+        <input type="hidden" id="calc-category" value="Medical" />
+        <div class="row">
           <div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 700;">
-              <span>Readiness Progress</span>
-              <span id="checklist-progress-label">0 of 4 completed (0%)</span>
-            </div>
-            <div class="progress-track" aria-hidden="true">
-              <div id="checklist-progress-bar" class="progress-fill" style="width: 0%;"></div>
-            </div>
+            <label for="calc-income">Monthly Income (Rs.)</label>
+            <input type="number" id="calc-income" min="0" />
+            <p class="field-error" id="calc-income-error"></p>
           </div>
-
-          <ul id="checklist-items" class="checklist-items"></ul>
-
-          <div style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.65rem;">
-            <a class="btn btn-sage btn-sm" href="request-help.html">Proceed to Request Help</a>
-            <button id="checklist-reset" class="btn btn-outline btn-sm" type="button" style="color: #F7FFF7; border-color: #4ECDC4;">
-              Reset Checklist
-            </button>
+          <div>
+            <label for="calc-members">Household Size</label>
+            <input type="number" id="calc-members" min="1" max="25" />
+            <p class="field-error" id="calc-members-error"></p>
           </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Accessible FAQ Accordion -->
-    <section class="section" aria-labelledby="faq-heading">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-header__eyebrow">Common Questions</span>
-          <h2 id="faq-heading">Eligibility &amp; Verification FAQs</h2>
-          <p>Review how Charitree verifies applications and handles special emergency cases.</p>
         </div>
-        <div id="eligibility-faq-list" class="accordion"></div>
-      </div>
+        <p class="field-error" id="calc-category-error"></p>
+        <div class="check-row">
+          <input type="checkbox" id="calc-docs-ready" />
+          <label for="calc-docs-ready">My documents are ready</label>
+        </div>
+        <button type="submit" class="btn">Calculate Eligibility</button>
+      </form>
+      <div id="eligibility-result" class="box__body" role="status" aria-live="polite" hidden></div>
     </section>
+
+    <details class="box" open>
+      <summary class="box__title">Checklist Activity</summary>
+      <ul id="checklist-items" class="checklist box__body"></ul>
+    </details>
+
+    <!-- Required by main.js to start; not shown -->
+    <div id="programs-grid" hidden></div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h3 class="footer-heading">Charitree</h3>
-          <p>
-            Growing Hope Together. A transparent community charity platform connecting verified applicants and donors across Pakistan.
-          </p>
-        </div>
-        <div>
-          <h3 class="footer-heading">Support Portal</h3>
-          <ul class="footer-links">
-            <li><a href="eligibility-guide.html">Eligibility Guide</a></li>
-            <li><a href="request-help.html">Request Help</a></li>
-            <li><a href="track-request.html">Track Support Request</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-heading">Platform</h3>
-          <ul class="footer-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#campaigns">Active Campaigns</a></li>
-            <li><a href="../index.html#donate">Donate Now</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-heading">Beneficiary Desk</h3>
-          <p>Islamabad Community Hub, Sector F-8/3</p>
-          <p>Helpline: Mon–Sat, 9:00 AM – 6:00 PM</p>
-          <p>Email: <a href="mailto:support@charitree.org">support@charitree.org</a></p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>&copy; 2026 Charitree Foundation. Built by Aiman Zahid (26i-3221).</span>
-        <a href="#main-content">Back to top &uarr;</a>
-      </div>
+      <p>&copy; 2026 Charitree – Growing Hope Together</p>
     </div>
   </footer>
 
