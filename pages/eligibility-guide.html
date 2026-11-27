@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check eligibility for Charitree support programs.">
+  <title>Eligibility Guide | Charitree</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand" href="../index.html" aria-label="Charitree Home">
+        <img class="brand__logo" src="../images/charitree-logo.png" alt="Charitree logo" />
+        <span>Charitree</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="../index.html#campaigns">Campaigns</a></li>
+          <li><a class="nav-link" href="request-help.html">Request Help</a></li>
+          <li><a class="nav-link is-current" href="eligibility-guide.html" aria-current="page">Eligibility</a></li>
+          <li><a class="nav-link" href="track-request.html">Track</a></li>
+          <li><a class="nav-link nav-donate" href="../index.html#donate">Donate Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+
+    <div id="eligibility-tabs" class="tabs" role="tablist" aria-label="Categories">
+      <button class="tab-btn is-active" role="tab" aria-selected="true" data-category="Medical">Medical</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-category="Education">Education</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-category="Food Aid">Food Aid</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-category="Housing">Housing</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-category="Clean Water">Clean Water</button>
+    </div>
+
+    <section class="box" aria-labelledby="calc-title">
+      <h2 id="calc-title" class="box__title">Check My Eligibility</h2>
+      <form id="eligibility-form" class="box__body" novalidate>
+        <input type="hidden" id="calc-category" value="Medical" />
+        <div class="row">
+          <div>
+            <label for="calc-income">Monthly Income (Rs.)</label>
+            <input type="number" id="calc-income" min="0" />
+            <p class="field-error" id="calc-income-error"></p>
+          </div>
+          <div>
+            <label for="calc-members">Household Size</label>
+            <input type="number" id="calc-members" min="1" max="25" />
+            <p class="field-error" id="calc-members-error"></p>
+          </div>
+        </div>
+        <p class="field-error" id="calc-category-error"></p>
+        <div class="check-row">
+          <input type="checkbox" id="calc-docs-ready" />
+          <label for="calc-docs-ready">My documents are ready</label>
+        </div>
+        <button type="submit" class="btn">Calculate Eligibility</button>
+      </form>
+      <div id="eligibility-result" class="box__body" role="status" aria-live="polite" hidden></div>
+    </section>
+
+    <details class="box" open>
+      <summary class="box__title">Checklist Activity</summary>
+      <ul id="checklist-items" class="checklist box__body"></ul>
+    </details>
+
+    <!-- Required by main.js to start; not shown -->
+    <div id="programs-grid" hidden></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Charitree – Growing Hope Together</p>
+    </div>
+  </footer>
+
+  <script src="../js/support-data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
