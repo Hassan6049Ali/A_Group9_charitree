@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Charitree for donor support, volunteer opportunities, community partnerships, or financial audit questions.">
+  <title>Contact Us | Charitree Charity Platform</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="urgent-bar" role="region" aria-label="Urgent campaign alert">
+    <div class="container urgent-bar__inner">
+      <span class="urgent-bar__tag">Urgent Drive</span>
+      <span>Monsoon Clean Water Relief: 82% funded toward 12 community filtration units.</span>
+      <a href="transparency.html">View Live Allocation</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="../index.html" aria-label="Charitree Home">
+        <svg class="brand__icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" fill="#133E45" stroke="#4ECDC4" stroke-width="2" />
+          <path d="M18 28V15" stroke="#F7FFF7" stroke-width="2.4" stroke-linecap="round" />
+          <path d="M18 19C13.5 19 10.5 16 10.5 11.8C14.7 11.8 18 14.7 18 19Z" fill="#4ECDC4" />
+          <path d="M18 16C22.5 16 25.5 13 25.5 8.8C21.3 8.8 18 11.7 18 16Z" fill="#FF6B6B" />
+        </svg>
+        <span>Charitree</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle__bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="transparency.html">Transparency</a></li>
+          <li><a class="nav-link is-active" href="contact.html" aria-current="page">Contact</a></li>
+          <li><a class="btn btn-cta nav-cta" href="#contact-form-section">Support a Cause</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <span class="badge badge-sage">Connect With Charitree</span>
+        <h1>Let's Grow Lasting Impact Together</h1>
+        <p class="page-hero__lead">
+          Whether you are checking a donation receipt, volunteering on a planting weekend, or proposing a school partnership, our coordinators respond within one business day.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact-form-section" class="section" aria-labelledby="contact-heading">
+      <div class="container contact-layout">
+        <div class="card card--teal">
+          <div class="section-header" style="margin-bottom: 1.25rem;">
+            <span class="section-header__eyebrow">Direct Message</span>
+            <h2 id="contact-heading">Send Us an Inquiry</h2>
+            <p>Fields marked with an asterisk (*) are required so we can route your request accurately.</p>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="full-name">
+                  Full Name <span aria-hidden="true">*</span>
+                </label>
+                <input
+                  class="form-control"
+                  id="full-name"
+                  name="fullName"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="e.g., Zainab Tariq"
+                  aria-describedby="full-name-error"
+                  required
+                >
+                <span class="field-error" id="full-name-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">
+                  Email Address <span aria-hidden="true">*</span>
+                </label>
+                <input
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="name@example.com"
+                  aria-describedby="email-error"
+                  required
+                >
+                <span class="field-error" id="email-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="topic">
+                  Inquiry Topic <span aria-hidden="true">*</span>
+                </label>
+                <select
+                  class="form-control"
+                  id="topic"
+                  name="topic"
+                  aria-describedby="topic-error"
+                  required
+                >
+                  <option value="">Select a topic...</option>
+                  <option value="donor-support">Donor &amp; Receipt Support</option>
+                  <option value="volunteer">Volunteer &amp; Field Programs</option>
+                  <option value="partnership">Community / NGO Partnership</option>
+                  <option value="transparency">Audit &amp; Transparency Inquiry</option>
+                  <option value="general">General Question</option>
+                </select>
+                <span class="field-error" id="topic-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="reference">
+                  Donation Reference ID (Optional)
+                </label>
+                <input
+                  class="form-control"
+                  id="reference"
+                  name="reference"
+                  type="text"
+                  placeholder="e.g., CHR-2026-4821"
+                  aria-describedby="reference-hint reference-error"
+                >
+                <span class="field-hint" id="reference-hint">Format: CHR-YYYY-XXXX</span>
+                <span class="field-error" id="reference-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">
+                Message <span aria-hidden="true">*</span>
+              </label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Share how we can help, which campaign you are writing about, or how you would like to volunteer..."
+                aria-describedby="message-count message-error"
+                required
+              ></textarea>
+              <span class="field-hint" id="message-count">0 / 15 min characters</span>
+              <span class="field-error" id="message-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-group" for="consent">
+                <input
+                  id="consent"
+                  name="consent"
+                  type="checkbox"
+                  aria-describedby="consent-error"
+                  required
+                >
+                <span>I agree to let Charitree use this information solely to respond to my inquiry.</span>
+              </label>
+              <span class="field-error" id="consent-error" aria-live="polite"></span>
+            </div>
+
+            <div>
+              <button class="btn btn-cta" type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="grid" aria-label="Charitree contact channels and volunteer info">
+          <article class="card card--sage">
+            <h3>Direct Support Desks</h3>
+            <ul class="contact-detail-list">
+              <li>
+                <strong>Donor &amp; Receipt Desk</strong>
+                <span><a href="mailto:donors@charitree.org">donors@charitree.org</a> &middot; Replies within 24 hours</span>
+              </li>
+              <li>
+                <strong>Volunteer Coordination</strong>
+                <span><a href="mailto:volunteer@charitree.org">volunteer@charitree.org</a> &middot; Weekend field drives</span>
+              </li>
+              <li>
+                <strong>Community Hub Address</strong>
+                <span>House 14, Street 28, Sector F-8/3, Islamabad</span>
+              </li>
+              <li>
+                <strong>Office Hours</strong>
+                <span>Monday – Friday, 9:00 AM – 6:00 PM PKT</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card card--coral">
+            <div class="card__meta">
+              <span class="badge badge-coral">Volunteers Needed</span>
+            </div>
+            <h3>Weekend Canopy &amp; Water Drives</h3>
+            <p>
+              We welcome civil engineers, medical students, teachers, and weekend volunteers to join our verified regional deployments.
+            </p>
+            <a class="btn btn-outline" href="about.html">Read Our Field Standards</a>
+          </article>
+
+          <article class="card card--teal">
+            <h3>Verify Before You Give</h3>
+            <p>
+              Want to inspect how funds from previous drives were spent before contributing? Browse our open-book ledger anytime.
+            </p>
+            <a class="btn btn-primary" href="transparency.html">View Transparency Ledger</a>
+          </article>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-heading">Charitree</h3>
+          <p>
+            A transparent community charity platform connecting supporters with verified education, clean water, healthcare, and reforestation drives.
+          </p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Charitree</a></li>
+            <li><a href="transparency.html">Financial Transparency</a></li>
+            <li><a href="contact.html">Contact &amp; Volunteer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Focus Areas</h3>
+          <ul class="footer-links">
+            <li><a href="transparency.html#allocations">Youth Education</a></li>
+            <li><a href="transparency.html#allocations">Clean Water Access</a></li>
+            <li><a href="transparency.html#allocations">Mobile Healthcare</a></li>
+            <li><a href="transparency.html#allocations">Native Reforestation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Contact</h3>
+          <p>Islamabad Community Hub, Sector F-8/3</p>
+          <p>Email: <a href="mailto:hello@charitree.org">hello@charitree.org</a></p>
+          <p>Donor Desk: Mon–Fri, 9:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Charitree Foundation. Registered Nonprofit Initiative.</span>
+        <a href="#main-content">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Charitree's live financial transparency breakdown, program allocation percentages, and audited disbursement ledger.">
+  <title>Financial Transparency | Charitree Charity Platform</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="urgent-bar" role="region" aria-label="Urgent campaign alert">
+    <div class="container urgent-bar__inner">
+      <span class="urgent-bar__tag">Urgent Drive</span>
+      <span>Monsoon Clean Water Relief: 82% funded toward 12 community filtration units.</span>
+      <a href="#allocations">Inspect Water Fund</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="../index.html" aria-label="Charitree Home">
+        <svg class="brand__icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" fill="#133E45" stroke="#4ECDC4" stroke-width="2" />
+          <path d="M18 28V15" stroke="#F7FFF7" stroke-width="2.4" stroke-linecap="round" />
+          <path d="M18 19C13.5 19 10.5 16 10.5 11.8C14.7 11.8 18 14.7 18 19Z" fill="#4ECDC4" />
+          <path d="M18 16C22.5 16 25.5 13 25.5 8.8C21.3 8.8 18 11.7 18 16Z" fill="#FF6B6B" />
+        </svg>
+        <span>Charitree</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle__bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link is-active" href="transparency.html" aria-current="page">Transparency</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+          <li><a class="btn btn-cta nav-cta" href="contact.html#contact-form-section">Support a Cause</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <span class="badge badge-sage">FY 2026 Open Ledger</span>
+        <h1>Every Dollar Tracked From Pledge to Field</h1>
+        <p class="page-hero__lead">
+          We publish how every contribution is divided across direct community programs and lean stewardship. Filter below by cause to inspect progress and verified disbursements.
+        </p>
+        <div class="page-hero__actions">
+          <a class="btn btn-cta" href="#allocations">Filter Allocations</a>
+          <a class="btn btn-outline-light" href="#ledger">View Audit Ledger</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="summary-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">Annual Financial Snapshot</span>
+          <h2 id="summary-heading">2026 Fiscal Overview</h2>
+          <p>Figures reflect verified contributions and signed field disbursements through Q4 2026.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card card--teal">
+            <p class="stat-value">$480,000</p>
+            <p class="stat-label">Total donor contributions received</p>
+          </article>
+          <article class="card card--sage">
+            <p class="stat-value">$438,720</p>
+            <p class="stat-label">Direct program delivery (91.4%)</p>
+          </article>
+          <article class="card card--teal">
+            <p class="stat-value">$41,280</p>
+            <p class="stat-label">Audit, payment &amp; core operations (8.6%)</p>
+          </article>
+          <article class="card card--coral">
+            <p class="stat-value">4.2 Days</p>
+            <p class="stat-label">Median time from campaign close to payout</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="allocations" class="section section--alt" aria-labelledby="allocations-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">Interactive Fund Breakdown</span>
+          <h2 id="allocations-heading">Category Allocations &amp; Progress</h2>
+          <p>Select a category tab to filter both the allocation cards and the audited disbursement table below.</p>
+        </div>
+
+        <div class="filter-toolbar">
+          <div class="filter-tabs" role="tablist" aria-label="Filter transparency records by category">
+            <button class="filter-tab is-active" type="button" role="tab" aria-selected="true" data-filter="all">
+              All Funds
+            </button>
+            <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="education">
+              Education
+            </button>
+            <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="water">
+              Clean Water
+            </button>
+            <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="healthcare">
+              Healthcare
+            </button>
+            <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="reforestation">
+              Reforestation
+            </button>
+            <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="operations">
+              Operations
+            </button>
+          </div>
+          <p id="filter-status" class="filter-status" aria-live="polite"></p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card card--sage allocation-card" data-category="education" data-amount="144000">
+            <div class="card__meta">
+              <span class="badge badge-soft">Education</span>
+              <span class="badge badge-teal">30.0%</span>
+            </div>
+            <h3>Solar Classrooms &amp; Scholarships</h3>
+            <p>Funds solar micro-grids, textbooks, and secondary tuition stipends across 14 rural schools.</p>
+            <div class="progress-row">
+              <div class="progress-labels">
+                <span>$132,500 disbursed</span>
+                <span>$144,000 goal</span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Education fund disbursement 92%">
+                <div class="progress-fill" style="width: 92%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--coral allocation-card" data-category="water" data-amount="124800">
+            <div class="card__meta">
+              <span class="badge badge-coral">Urgent · Clean Water</span>
+              <span class="badge badge-teal">26.0%</span>
+            </div>
+            <h3>Monsoon Filtration &amp; Borewells</h3>
+            <p>Installs biosand filtration kiosks and solar-pumped community wells in flood-affected villages.</p>
+            <div class="progress-row">
+              <div class="progress-labels">
+                <span>$102,300 disbursed</span>
+                <span>$124,800 goal</span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Clean Water fund disbursement 82%">
+                <div class="progress-fill progress-fill--urgent" style="width: 82%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--sage allocation-card" data-category="healthcare" data-amount="96000">
+            <div class="card__meta">
+              <span class="badge badge-soft">Healthcare</span>
+              <span class="badge badge-teal">20.0%</span>
+            </div>
+            <h3>Mobile Maternal &amp; Primary Clinics</h3>
+            <p>Equips three mobile medical vans with cold-chain vaccines, diagnostics, and prenatal kits.</p>
+            <div class="progress-row">
+              <div class="progress-labels">
+                <span>$84,480 disbursed</span>
+                <span>$96,000 goal</span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Healthcare fund disbursement 88%">
+                <div class="progress-fill" style="width: 88%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--sage allocation-card" data-category="reforestation" data-amount="73920">
+            <div class="card__meta">
+              <span class="badge badge-soft">Reforestation</span>
+              <span class="badge badge-teal">15.4%</span>
+            </div>
+            <h3>Native Canopy &amp; Watershed Buffers</h3>
+            <p>Supports community nurseries planting drought-resilient native trees with 12-month survival audits.</p>
+            <div class="progress-row">
+              <div class="progress-labels">
+                <span>$69,485 disbursed</span>
+                <span>$73,920 goal</span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" aria-label="Reforestation fund disbursement 94%">
+                <div class="progress-fill" style="width: 94%"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--teal allocation-card" data-category="operations" data-amount="41280">
+            <div class="card__meta">
+              <span class="badge badge-soft">Operations</span>
+              <span class="badge badge-teal">8.6%</span>
+            </div>
+            <h3>Audits, Compliance &amp; Platform Care</h3>
+            <p>Covers independent CPA reviews, banking/payment processing fees, and field verification travel.</p>
+            <div class="progress-row">
+              <div class="progress-labels">
+                <span>$38,100 spent</span>
+                <span>$41,280 cap</span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Operations budget usage 92%">
+                <div class="progress-fill" style="width: 92%"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ledger" class="section" aria-labelledby="ledger-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__eyebrow">Audited Ledger</span>
+          <h2 id="ledger-heading">Recent Verified Disbursements</h2>
+          <p>Every outgoing transfer is matched to a partner milestone invoice and independent receipt check.</p>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Program / Partner</th>
+                <th scope="col">Category</th>
+                <th scope="col">Region</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Verification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="ledger-row" data-category="water">
+                <td>2026-11-18</td>
+                <td>Indus Basin Biosand Filter Deployment (Batch 4)</td>
+                <td><span class="badge badge-coral">Clean Water</span></td>
+                <td>Thatta District</td>
+                <td class="amount-cell">$28,400</td>
+                <td><span class="badge badge-sage">Receipt Verified</span></td>
+              </tr>
+              <tr class="ledger-row" data-category="education">
+                <td>2026-11-11</td>
+                <td>Beacon Rural Schools Solar &amp; Lab Kits</td>
+                <td><span class="badge badge-soft">Education</span></td>
+                <td>Swat Valley</td>
+                <td class="amount-cell">$36,200</td>
+                <td><span class="badge badge-sage">Receipt Verified</span></td>
+              </tr>
+              <tr class="ledger-row" data-category="healthcare">
+                <td>2026-11-04</td>
+                <td>CareVan Mobile Maternal Clinic Supply</td>
+                <td><span class="badge badge-soft">Healthcare</span></td>
+                <td>Multan Rural</td>
+                <td class="amount-cell">$24,900</td>
+                <td><span class="badge badge-sage">Receipt Verified</span></td>
+              </tr>
+              <tr class="ledger-row" data-category="reforestation">
+                <td>2026-10-26</td>
+                <td>Margalla Foothills Native Sapling Nursery</td>
+                <td><span class="badge badge-soft">Reforestation</span></td>
+                <td>Islamabad Belt</td>
+                <td class="amount-cell">$18,750</td>
+                <td><span class="badge badge-sage">Field Audited</span></td>
+              </tr>
+              <tr class="ledger-row" data-category="education">
+                <td>2026-10-14</td>
+                <td>Girls STEM Scholarship Cohort (Term 2)</td>
+                <td><span class="badge badge-soft">Education</span></td>
+                <td>Gilgit-Baltistan</td>
+                <td class="amount-cell">$22,800</td>
+                <td><span class="badge badge-sage">Receipt Verified</span></td>
+              </tr>
+              <tr class="ledger-row" data-category="operations">
+                <td>2026-10-03</td>
+                <td>Q3 External Financial Audit &amp; Gateway Fees</td>
+                <td><span class="badge badge-soft">Operations</span></td>
+                <td>National HQ</td>
+                <td class="amount-cell">$12,450</td>
+                <td><span class="badge badge-teal">CPA Signed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p id="ledger-empty" class="filter-status" hidden style="margin-top: 1rem;">
+          No disbursement entries match the selected category.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <h2>Questions About an Allocation or Receipt?</h2>
+            <p>Reach our financial transparency desk with any donation reference ID for line-item documentation.</p>
+          </div>
+          <a class="btn btn-cta" href="contact.html#contact-form-section">Ask Our Audit Desk</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-heading">Charitree</h3>
+          <p>
+            A transparent community charity platform connecting supporters with verified education, clean water, healthcare, and reforestation drives.
+          </p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Charitree</a></li>
+            <li><a href="transparency.html">Financial Transparency</a></li>
+            <li><a href="contact.html">Contact &amp; Volunteer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Focus Areas</h3>
+          <ul class="footer-links">
+            <li><a href="transparency.html#allocations">Youth Education</a></li>
+            <li><a href="transparency.html#allocations">Clean Water Access</a></li>
+            <li><a href="transparency.html#allocations">Mobile Healthcare</a></li>
+            <li><a href="transparency.html#allocations">Native Reforestation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Contact</h3>
+          <p>Islamabad Community Hub, Sector F-8/3</p>
+          <p>Email: <a href="mailto:hello@charitree.org">hello@charitree.org</a></p>
+          <p>Donor Desk: Mon–Fri, 9:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Charitree Foundation. Registered Nonprofit Initiative.</span>
+        <a href="#main-content">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
