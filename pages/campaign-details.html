@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#1A535C">
+  <meta name="description" content="Learn about a Charitree cause and try the simulated donation experience.">
+  <title>Campaign Details & Donation | Charitree</title><link rel="icon" href="../images/charitree-logo.jpg" type="image/jpeg"><link rel="stylesheet" href="../css/styles.css">
+  <script defer src="../js/data.js"></script><script defer src="../js/app.js"></script>
+</head>
+<body data-page="details">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement"><span class="announcement__dot"></span> A student-built prototype — campaigns use sample data; donations are simulated; no real payment is collected.</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../index.html" aria-label="Charitree home"><img src="../images/charitree-logo.jpg" alt="Charitree tree and heart logo" class="brand__logo"><span class="brand__text"><strong>Charitree</strong><small>Growing hope together</small></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="explore-campaigns.html">Explore Campaigns</a><a class="nav-link is-active" href="campaign-details.html?id=education" aria-current="page">Featured Cause</a><a class="button button--small button--coral nav-cta" href="#donate">Make an Impact <span aria-hidden="true">→</span></a></nav>
+  </div></header>
+  <main id="main">
+    <div class="container detail-breadcrumb"><a href="../index.html">Home</a><span aria-hidden="true">/</span><a href="explore-campaigns.html">Explore campaigns</a><span aria-hidden="true">/</span><span id="breadcrumb-campaign">Campaign details</span></div>
+    <section class="section section--detail"><div class="container detail-layout">
+      <article class="detail-main" id="campaign-detail-content">
+        <div class="loading-state">Loading campaign details…</div>
+      </article>
+      <aside class="donation-card" id="donate" aria-labelledby="donation-title">
+        <div class="donation-card__top"><span class="pill pill--coral">Demo donation</span><span class="secure-label"><span aria-hidden="true">◇</span> Safe prototype</span></div>
+        <h2 id="donation-title">Be part of the change.</h2><p class="donation-intro">Choose an amount to see what your support could help make possible. This donation form is now centred below the campaign information for easier access.</p>
+        <form id="donation-form" novalidate>
+          <fieldset class="amount-fieldset"><legend>Choose your contribution</legend><div class="amount-grid"><button class="amount-button is-selected" type="button" data-amount="500" aria-pressed="true">Rs. 500</button><button class="amount-button" type="button" data-amount="1000" aria-pressed="false">Rs. 1,000</button><button class="amount-button" type="button" data-amount="2500" aria-pressed="false">Rs. 2,500</button><button class="amount-button" type="button" data-amount="5000" aria-pressed="false">Rs. 5,000</button></div></fieldset>
+          <div class="field-group"><label for="custom-amount">Or enter another amount (PKR)</label><div class="currency-input"><span>Rs.</span><input id="custom-amount" name="amount" type="number" min="100" max="1000000" step="50" placeholder="e.g. 1500" inputmode="numeric"><span class="currency-input__suffix">PKR</span></div><small class="field-hint"><strong>Donation limits:</strong> Minimum Rs. 100 · Maximum Rs. 1,000,000</small><p class="field-error" id="amount-error" aria-live="polite"></p></div>
+          <fieldset class="frequency-fieldset"><legend>How often would you like to give?</legend><div class="choice-pills"><label><input type="radio" name="frequency" value="One-time" checked><span>One-time</span></label><label><input type="radio" name="frequency" value="Monthly"><span>Monthly</span></label></div></fieldset>
+          <div class="impact-preview" id="impact-preview"><span class="impact-preview__icon">✦</span><p><strong>Your impact</strong><span id="impact-copy">Your contribution could help provide learning materials for a student.</span></p></div>
+          <div class="form-divider"></div>
+          <div class="field-group"><label for="donor-name">Your name</label><input class="text-input" id="donor-name" name="donorName" type="text" autocomplete="name" placeholder="Enter your name" required minlength="2" maxlength="70"><p class="field-error" id="name-error" aria-live="polite"></p></div>
+          <div class="field-group"><label for="donor-email">Email address</label><input class="text-input" id="donor-email" name="donorEmail" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="120"><p class="field-error" id="email-error" aria-live="polite"></p></div>
+          <label class="checkbox-row"><input type="checkbox" id="anonymous-gift"><span>Display my contribution anonymously in this demo</span></label>
+          <button class="button button--primary button--full" type="submit">Continue with demo donation <span aria-hidden="true">→</span></button>
+          <p class="donation-disclaimer">This is an academic prototype. No payment details are requested, no money is transferred, and this form does not contact a payment provider.</p>
+        </form>
+        <div class="donation-success" id="donation-success" tabindex="-1" hidden role="status" aria-live="polite"><div class="success-mark">✓</div><h3>Your demo journey is complete!</h3><p id="success-summary"></p><p class="receipt-id" id="receipt-id"></p><button class="button button--outline button--full" id="reset-donation" type="button">Try another amount</button></div>
+      </aside>
+    </div></section>
+    <section class="section section--related"><div class="container"><div class="section-heading"><div><span class="eyebrow">More ways to help</span><h2>Other causes to explore<span class="accent-dot">.</span></h2></div><a class="text-link text-link--strong" href="explore-campaigns.html">All campaigns <span aria-hidden="true">→</span></a></div><div class="campaign-grid" id="related-campaigns"></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-main"><a class="brand brand--footer" href="../index.html"><img src="../images/charitree-logo.jpg" alt="" class="brand__logo"><span class="brand__text"><strong>Charitree</strong><small>Growing hope together</small></span></a><p class="footer-motto">Helping good intentions find their next step.</p><div class="footer-links"><a href="../index.html">Home</a><a href="explore-campaigns.html">Explore campaigns</a><a href="campaign-details.html?id=education">Featured cause</a></div></div><div class="container footer-bottom"><span>© <span data-year></span> Charitree. Student project prototype.</span><span>Demo only · No real donations are processed. Logo supplied by project team; add its AI tool disclosure if applicable.</span></div></footer>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body></html>
