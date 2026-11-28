@@ -109,3 +109,7 @@ The Charitree logo in `images/charitree-logo.jpg` was supplied by the project ow
 - GitHub repository: `ADD_GROUP_REPOSITORY_URL`
 - Live website: `ADD_GITHUB_PAGES_URL`
 - Google Form: `ADD_CHARITREE_FEEDBACK_FORM_URL`
+
+
+## Feedback-driven improvements
+Based on two prototype feedback responses, the campaign donation panel was moved from the right sidebar to a centered position below the campaign information. The donation limits (minimum Rs. 100 and maximum Rs. 1,000,000) were given stronger visual emphasis beside the amount field. The donation panel and preset amount layout were adjusted for responsive screens. Re-test these changes locally before reporting final QA results.
