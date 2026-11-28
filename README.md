@@ -106,7 +106,7 @@ The Charitree logo in `images/charitree-logo.jpg` was supplied by the project ow
 
 ## Links to fill in after deployment
 
-- GitHub repository: `ADD_GROUP_REPOSITORY_URL`
+- GitHub repository: https://github.com/Hassan6049Ali/A_Group9_charitree
 - Live website: `ADD_GITHUB_PAGES_URL`
 - Google Form: `ADD_CHARITREE_FEEDBACK_FORM_URL`
 
